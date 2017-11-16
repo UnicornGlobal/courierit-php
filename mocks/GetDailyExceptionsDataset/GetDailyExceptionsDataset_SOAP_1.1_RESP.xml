@@ -1,0 +1,4 @@
+<GetDailyExceptionsDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetDailyExceptionsDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetDailyExceptionsDatasetResult>
+</GetDailyExceptionsDatasetResponse>

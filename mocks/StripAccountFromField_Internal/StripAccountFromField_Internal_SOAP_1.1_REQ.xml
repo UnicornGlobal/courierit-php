@@ -1,0 +1,4 @@
+<StripAccountFromField_Internal xmlns="http://citjnb.co.za/citwebservices/">
+    <strInput>string</strInput>
+    <strDelimiter>string</strDelimiter>
+</StripAccountFromField_Internal>

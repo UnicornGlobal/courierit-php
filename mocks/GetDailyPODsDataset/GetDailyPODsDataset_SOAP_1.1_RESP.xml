@@ -1,0 +1,4 @@
+<GetDailyPODsDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetDailyPODsDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetDailyPODsDatasetResult>
+</GetDailyPODsDatasetResponse>

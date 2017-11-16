@@ -1,0 +1,4 @@
+<GetCourierDailyManifestDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetCourierDailyManifestDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetCourierDailyManifestDatasetResult>
+</GetCourierDailyManifestDatasetResponse>

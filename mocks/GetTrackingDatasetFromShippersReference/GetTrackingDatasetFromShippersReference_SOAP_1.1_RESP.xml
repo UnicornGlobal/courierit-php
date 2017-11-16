@@ -1,0 +1,4 @@
+<GetTrackingDatasetFromShippersReferenceResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetTrackingDatasetFromShippersReferenceResult>
+        <xsd:schema>schema</xsd:schema>xml</GetTrackingDatasetFromShippersReferenceResult>
+</GetTrackingDatasetFromShippersReferenceResponse>

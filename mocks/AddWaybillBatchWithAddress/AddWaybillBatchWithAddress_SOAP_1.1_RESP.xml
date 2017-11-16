@@ -1,0 +1,4 @@
+<AddWaybillBatchWithAddressResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <AddWaybillBatchWithAddressResult>
+        <xsd:schema>schema</xsd:schema>xml</AddWaybillBatchWithAddressResult>
+</AddWaybillBatchWithAddressResponse>

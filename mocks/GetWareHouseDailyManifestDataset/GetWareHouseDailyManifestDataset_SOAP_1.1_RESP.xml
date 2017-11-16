@@ -1,0 +1,4 @@
+<GetWareHouseDailyManifestDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetWareHouseDailyManifestDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetWareHouseDailyManifestDatasetResult>
+</GetWareHouseDailyManifestDatasetResponse>

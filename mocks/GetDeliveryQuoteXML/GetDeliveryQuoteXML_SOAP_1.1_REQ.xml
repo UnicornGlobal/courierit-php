@@ -1,0 +1,10 @@
+<GetDeliveryQuoteXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strSuburbIDFrom>string</strSuburbIDFrom>
+    <strSuburbIDTo>string</strSuburbIDTo>
+    <strKiloMass>string</strKiloMass>
+    <strParcelDimensions>string</strParcelDimensions>
+    <strReferenceNumber>string</strReferenceNumber>
+</GetDeliveryQuoteXML>

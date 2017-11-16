@@ -1,0 +1,11 @@
+<AddTrackingDetailsPargoNewCall xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strAccountNumber>string</strAccountNumber>
+    <strWaybillNumber>string</strWaybillNumber>
+    <strTrackingCode>string</strTrackingCode>
+    <strTrackingDate>string</strTrackingDate>
+    <strTrackingTime>string</strTrackingTime>
+    <strTrackingDetail>string</strTrackingDetail>
+    <strTrackingHub>string</strTrackingHub>
+</AddTrackingDetailsPargoNewCall>

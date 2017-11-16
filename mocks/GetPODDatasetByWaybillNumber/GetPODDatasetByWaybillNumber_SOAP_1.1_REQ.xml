@@ -1,0 +1,6 @@
+<GetPODDatasetByWaybillNumber xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strWaybillNumber>string</strWaybillNumber>
+</GetPODDatasetByWaybillNumber>

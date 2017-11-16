@@ -1,0 +1,4 @@
+<Login xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>UserName</strUserName>
+    <strPassword>Password</strPassword>
+</Login>

@@ -1,0 +1,9 @@
+<GetAddressDetailsXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strStreetCode>string</strStreetCode>
+    <strBoxCode>string</strBoxCode>
+    <strSuburb>string</strSuburb>
+    <strCity>string</strCity>
+    <strPartialLookup>string</strPartialLookup>
+</GetAddressDetailsXML>

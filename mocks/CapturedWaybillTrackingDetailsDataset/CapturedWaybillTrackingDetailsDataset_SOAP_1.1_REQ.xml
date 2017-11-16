@@ -1,0 +1,7 @@
+<CapturedWaybillTrackingDetailsDataset xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccount>string</strAccount>
+    <strFromDate>string</strFromDate>
+    <strToDate>string</strToDate>
+</CapturedWaybillTrackingDetailsDataset>

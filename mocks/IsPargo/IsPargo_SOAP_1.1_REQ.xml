@@ -1,0 +1,6 @@
+<IsPargo xmlns="http://citjnb.co.za/citwebservices/">
+    <strWaybill>string</strWaybill>
+    <strAccount>string</strAccount>
+    <strSiteID>string</strSiteID>
+    <strInHouseHub>string</strInHouseHub>
+</IsPargo>

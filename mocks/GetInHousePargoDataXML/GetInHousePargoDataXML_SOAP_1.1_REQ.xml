@@ -1,0 +1,8 @@
+<GetInHousePargoDataXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <SiteID>string</SiteID>
+    <strAccountNo>string</strAccountNo>
+    <strWaybillNo>string</strWaybillNo>
+    <strHub>string</strHub>
+</GetInHousePargoDataXML>

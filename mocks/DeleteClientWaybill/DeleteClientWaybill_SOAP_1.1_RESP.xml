@@ -1,0 +1,3 @@
+<DeleteClientWaybillResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <DeleteClientWaybillResult>xml</DeleteClientWaybillResult>
+</DeleteClientWaybillResponse>

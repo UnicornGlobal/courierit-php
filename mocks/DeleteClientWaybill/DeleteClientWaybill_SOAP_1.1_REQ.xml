@@ -1,0 +1,7 @@
+<DeleteClientWaybill xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strSiteID>string</strSiteID>
+    <strWaybillNumber>string</strWaybillNumber>
+    <strAccountNumber>string</strAccountNumber>
+</DeleteClientWaybill>

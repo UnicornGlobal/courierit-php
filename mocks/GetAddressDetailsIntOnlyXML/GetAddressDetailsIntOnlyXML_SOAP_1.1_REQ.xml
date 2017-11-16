@@ -1,0 +1,6 @@
+<GetAddressDetailsIntOnlyXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strCountry>string</strCountry>
+    <strCity>string</strCity>
+</GetAddressDetailsIntOnlyXML>

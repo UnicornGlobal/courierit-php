@@ -1,0 +1,4 @@
+<GetRTSReport xmlns="http://citjnb.co.za/citwebservices/">
+    <strAccounumber>string</strAccounumber>
+    <strDate>dateTime</strDate>
+</GetRTSReport>

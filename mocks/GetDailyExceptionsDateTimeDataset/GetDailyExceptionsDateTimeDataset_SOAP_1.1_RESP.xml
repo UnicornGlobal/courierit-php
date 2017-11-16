@@ -1,0 +1,5 @@
+<GetDailyExceptionsDateTimeDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetDailyExceptionsDateTimeDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetDailyExceptionsDateTimeDatasetResult>
+    <lngRecordsReturned>long</lngRecordsReturned>
+</GetDailyExceptionsDateTimeDatasetResponse>

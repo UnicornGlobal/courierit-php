@@ -1,0 +1,7 @@
+<UpdateMultipleTrackingTransferred xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strWaybillNumbers>string</strWaybillNumbers>
+    <strTrackingCode>string</strTrackingCode>
+</UpdateMultipleTrackingTransferred>
