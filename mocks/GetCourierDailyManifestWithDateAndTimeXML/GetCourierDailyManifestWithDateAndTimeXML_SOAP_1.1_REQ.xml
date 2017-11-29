@@ -1,0 +1,8 @@
+<GetCourierDailyManifestWithDateAndTimeXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strFromDate>string</strFromDate>
+    <strToDate>string</strToDate>
+    <lngRecordsReturned>long</lngRecordsReturned>
+</GetCourierDailyManifestWithDateAndTimeXML>

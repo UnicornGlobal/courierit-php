@@ -1,0 +1,7 @@
+<GetDailyExceptionsTrackingWithAllHubs xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strFromDate>string</strFromDate>
+    <strToDate>string</strToDate>
+</GetDailyExceptionsTrackingWithAllHubs>

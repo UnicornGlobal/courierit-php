@@ -1,0 +1,10 @@
+<GetPargoAddressDetailsXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strStoreName>string</strStoreName>
+    <strStoreOwner>string</strStoreOwner>
+    <strPostalcode>string</strPostalcode>
+    <strSuburb>string</strSuburb>
+    <strCity>string</strCity>
+    <strPupCode>string</strPupCode>
+</GetPargoAddressDetailsXML>

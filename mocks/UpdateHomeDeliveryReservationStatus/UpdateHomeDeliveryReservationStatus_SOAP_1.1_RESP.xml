@@ -1,0 +1,3 @@
+<UpdateHomeDeliveryReservationStatusResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <UpdateHomeDeliveryReservationStatusResult>boolean</UpdateHomeDeliveryReservationStatusResult>
+</UpdateHomeDeliveryReservationStatusResponse>

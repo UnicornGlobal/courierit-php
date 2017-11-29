@@ -1,0 +1,4 @@
+<GetPargoAddressPupOrSubId xmlns="http://citjnb.co.za/citwebservices/">
+    <strSearchType>string</strSearchType>
+    <strInput>string</strInput>
+</GetPargoAddressPupOrSubId>

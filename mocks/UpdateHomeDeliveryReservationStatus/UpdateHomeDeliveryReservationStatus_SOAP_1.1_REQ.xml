@@ -1,0 +1,15 @@
+<UpdateHomeDeliveryReservationStatus xmlns="http://citjnb.co.za/citwebservices/">
+    <Token>string</Token>
+    <UserName>string</UserName>
+    <WaybillNumber>string</WaybillNumber>
+    <ContactName>string</ContactName>
+    <AddressDetails>string</AddressDetails>
+    <OrderActionID>string</OrderActionID>
+    <PlantID>string</PlantID>
+    <IDNumber>string</IDNumber>
+    <IDType>string</IDType>
+    <ContactID>string</ContactID>
+    <SameDayDelivery>boolean</SameDayDelivery>
+    <ContactInformation>string</ContactInformation>
+    <Comments>string</Comments>
+</UpdateHomeDeliveryReservationStatus>

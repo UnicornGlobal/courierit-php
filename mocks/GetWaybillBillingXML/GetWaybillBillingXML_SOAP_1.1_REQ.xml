@@ -1,0 +1,6 @@
+<GetWaybillBillingXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccountNumber>string</strAccountNumber>
+    <strWaybillNumber>string</strWaybillNumber>
+</GetWaybillBillingXML>

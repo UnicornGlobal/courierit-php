@@ -1,0 +1,7 @@
+<GetInterBranchManifestDetails xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strFromBranch>string</strFromBranch>
+    <strToBranch>string</strToBranch>
+    <strManifestDate>string</strManifestDate>
+</GetInterBranchManifestDetails>

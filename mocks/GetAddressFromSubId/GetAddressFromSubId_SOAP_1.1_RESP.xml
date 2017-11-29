@@ -1,0 +1,4 @@
+<GetAddressFromSubIdResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetAddressFromSubIdResult>
+        <xsd:schema>schema</xsd:schema>xml</GetAddressFromSubIdResult>
+</GetAddressFromSubIdResponse>

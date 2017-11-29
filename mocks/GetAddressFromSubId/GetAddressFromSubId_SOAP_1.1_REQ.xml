@@ -1,0 +1,3 @@
+<GetAddressFromSubId xmlns="http://citjnb.co.za/citwebservices/">
+    <strSubId>string</strSubId>
+</GetAddressFromSubId>

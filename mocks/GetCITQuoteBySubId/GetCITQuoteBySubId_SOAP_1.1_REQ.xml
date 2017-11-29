@@ -1,0 +1,15 @@
+<GetCITQuoteBySubId xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strAccountNumber>string</strAccountNumber>
+    <strService>string</strService>
+    <strReference>string</strReference>
+    <strConsignorSubId>string</strConsignorSubId>
+    <strConsigneeSubId>string</strConsigneeSubId>
+    <strDimensions>string</strDimensions>
+    <strSaturday>string</strSaturday>
+    <strAfterHours>string</strAfterHours>
+    <strNextDay>string</strNextDay>
+    <strInsurance>string</strInsurance>
+    <dblValueForInsurance>double</dblValueForInsurance>
+</GetCITQuoteBySubId>

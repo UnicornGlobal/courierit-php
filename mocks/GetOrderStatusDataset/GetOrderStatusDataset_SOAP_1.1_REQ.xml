@@ -1,0 +1,6 @@
+<GetOrderStatusDataset xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strOrderNumber>string</strOrderNumber>
+</GetOrderStatusDataset>

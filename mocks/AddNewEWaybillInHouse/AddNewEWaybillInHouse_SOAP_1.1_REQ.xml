@@ -1,0 +1,22 @@
+<AddNewEWaybillInHouse xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strSiteID>string</strSiteID>
+    <strWaybillNumber>string</strWaybillNumber>
+    <strAccountNumber>string</strAccountNumber>
+    <strShippersReference>string</strShippersReference>
+    <strCompanyName>string</strCompanyName>
+    <strDeliveryAddressLine1>string</strDeliveryAddressLine1>
+    <strDeliveryAddressLine2>string</strDeliveryAddressLine2>
+    <strDeliveryAddressLine3>string</strDeliveryAddressLine3>
+    <strDeliveryAddressSuburb>string</strDeliveryAddressSuburb>
+    <strDeliveryAddressCity>string</strDeliveryAddressCity>
+    <strDeliveryAddressPostCode>string</strDeliveryAddressPostCode>
+    <strContactName>string</strContactName>
+    <strContactTelephone>string</strContactTelephone>
+    <strContactCellNumber>string</strContactCellNumber>
+    <strContactEmail>string</strContactEmail>
+    <strSpecialInstructions>string</strSpecialInstructions>
+    <strSubID>string</strSubID>
+    <strDimensions>string</strDimensions>
+</AddNewEWaybillInHouse>

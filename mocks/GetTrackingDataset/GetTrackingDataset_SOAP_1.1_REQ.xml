@@ -1,0 +1,6 @@
+<GetTrackingDataset xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strWaybillNo>string</strWaybillNo>
+</GetTrackingDataset>

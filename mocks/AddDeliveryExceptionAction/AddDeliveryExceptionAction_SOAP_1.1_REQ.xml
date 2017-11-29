@@ -1,0 +1,10 @@
+<AddDeliveryExceptionAction xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strWaybillNumber>string</strWaybillNumber>
+    <strActionCode>string</strActionCode>
+    <strActionDetails>string</strActionDetails>
+    <strRecordID>string</strRecordID>
+    <strHub>string</strHub>
+</AddDeliveryExceptionAction>

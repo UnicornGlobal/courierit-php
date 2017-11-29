@@ -1,0 +1,5 @@
+<GetDailyPODTimeDateDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetDailyPODTimeDateDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetDailyPODTimeDateDatasetResult>
+    <lngRecordsReturned>long</lngRecordsReturned>
+</GetDailyPODTimeDateDatasetResponse>

@@ -1,0 +1,7 @@
+<GetConveyorImages xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strAccountNo>string</strAccountNo>
+    <strToken>string</strToken>
+    <strWaybillNumber>string</strWaybillNumber>
+    <BoolhaveData>boolean</BoolhaveData>
+</GetConveyorImages>

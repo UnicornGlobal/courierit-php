@@ -1,0 +1,8 @@
+<GetCourierDailyManifestWithLinkedAccountsXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strAccountNo>string</strAccountNo>
+    <strLinkCode>string</strLinkCode>
+    <strFromDate>string</strFromDate>
+    <strToDate>string</strToDate>
+</GetCourierDailyManifestWithLinkedAccountsXML>

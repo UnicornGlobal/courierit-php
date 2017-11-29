@@ -1,0 +1,4 @@
+<GetPODDatasetByWaybillNumberResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetPODDatasetByWaybillNumberResult>
+        <xsd:schema>schema</xsd:schema>xml</GetPODDatasetByWaybillNumberResult>
+</GetPODDatasetByWaybillNumberResponse>

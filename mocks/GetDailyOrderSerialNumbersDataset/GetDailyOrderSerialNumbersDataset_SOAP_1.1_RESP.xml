@@ -1,0 +1,4 @@
+<GetDailyOrderSerialNumbersDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetDailyOrderSerialNumbersDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetDailyOrderSerialNumbersDatasetResult>
+</GetDailyOrderSerialNumbersDatasetResponse>

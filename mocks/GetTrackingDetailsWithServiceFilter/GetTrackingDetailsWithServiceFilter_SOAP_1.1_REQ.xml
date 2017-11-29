@@ -1,0 +1,5 @@
+<GetTrackingDetailsWithServiceFilter xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strWaybill>string</strWaybill>
+</GetTrackingDetailsWithServiceFilter>

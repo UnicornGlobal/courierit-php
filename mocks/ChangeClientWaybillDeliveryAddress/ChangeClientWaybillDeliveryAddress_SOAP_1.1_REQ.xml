@@ -1,0 +1,14 @@
+<ChangeClientWaybillDeliveryAddress xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <strSiteID>string</strSiteID>
+    <strWaybillNumber>string</strWaybillNumber>
+    <strAccountNumber>string</strAccountNumber>
+    <strCompanyName>string</strCompanyName>
+    <strDeliveryAddressLine1>string</strDeliveryAddressLine1>
+    <strDeliveryAddressLine2>string</strDeliveryAddressLine2>
+    <strDeliveryAddressLine3>string</strDeliveryAddressLine3>
+    <strDeliveryAddressSuburb>string</strDeliveryAddressSuburb>
+    <strDeliveryAddressCity>string</strDeliveryAddressCity>
+    <strDeliveryAddressPostCode>string</strDeliveryAddressPostCode>
+</ChangeClientWaybillDeliveryAddress>

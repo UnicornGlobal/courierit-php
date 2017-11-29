@@ -1,0 +1,4 @@
+<GetPODWebURLDatasetResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetPODWebURLDatasetResult>
+        <xsd:schema>schema</xsd:schema>xml</GetPODWebURLDatasetResult>
+</GetPODWebURLDatasetResponse>

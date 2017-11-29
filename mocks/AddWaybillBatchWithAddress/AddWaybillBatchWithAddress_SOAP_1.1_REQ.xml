@@ -1,0 +1,7 @@
+<AddWaybillBatchWithAddress xmlns="http://citjnb.co.za/citwebservices/">
+    <strUserName>string</strUserName>
+    <strToken>string</strToken>
+    <rsInternetBatch>
+        <xsd:schema>schema</xsd:schema>xml</rsInternetBatch>
+    <strInHouseSQLServer>string</strInHouseSQLServer>
+</AddWaybillBatchWithAddress>

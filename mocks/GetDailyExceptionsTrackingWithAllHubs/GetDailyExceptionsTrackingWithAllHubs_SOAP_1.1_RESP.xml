@@ -1,0 +1,4 @@
+<GetDailyExceptionsTrackingWithAllHubsResponse xmlns="http://citjnb.co.za/citwebservices/">
+    <GetDailyExceptionsTrackingWithAllHubsResult>
+        <xsd:schema>schema</xsd:schema>xml</GetDailyExceptionsTrackingWithAllHubsResult>
+</GetDailyExceptionsTrackingWithAllHubsResponse>

@@ -1,0 +1,16 @@
+<GetWaybillQuoteXML xmlns="http://citjnb.co.za/citwebservices/">
+    <strUsername>string</strUsername>
+    <strToken>string</strToken>
+    <strYourReference>string</strYourReference>
+    <strAccountNo>string</strAccountNo>
+    <strConsignorSuburb>string</strConsignorSuburb>
+    <strConsignorCity>string</strConsignorCity>
+    <strConsignorPostCode>string</strConsignorPostCode>
+    <strConsigneeSuburb>string</strConsigneeSuburb>
+    <strConsigneeCity>string</strConsigneeCity>
+    <strConsigneePostCode>string</strConsigneePostCode>
+    <strService>string</strService>
+    <strDimensions>string</strDimensions>
+    <strInsurance>string</strInsurance>
+    <dblValueForInsurance>double</dblValueForInsurance>
+</GetWaybillQuoteXML>
