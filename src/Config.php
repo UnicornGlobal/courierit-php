@@ -30,29 +30,8 @@ class Config
      */
     public function __construct($config)
     {
-        // Throw exceptions on essentials
-        $this->checkAndSetEssentials($config);
-
         // optionals
         $this->checkAndSetOverrides($config);
-    }
-
-    /**
-     * Check and set essential configuration elements.
-     *
-     * Required:
-     *
-     *   - API Key
-     *
-     * @param array $config An array of configuration options
-     */
-    private function checkAndSetEssentials($config)
-    {
-        if (!isset($config['key']) || empty($config['key'])) {
-            throw new ConfigException(ConfigException::MISSING_API_KEY);
-        }
-
-        $this->key = (string)$config['key'];
     }
 
     /**

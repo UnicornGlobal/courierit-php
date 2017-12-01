@@ -142,14 +142,11 @@ class RequestHandler
         );
     }
 
-    public function requestRaw(string $verb, string $service, string $method, array $parameters = [])
+    public function requestRaw(string $method, array $parameters = [])
     {
-        $prepared = $this->prepareRequest($service, $method);
 
         $response = $this->makeRequest(
-            $verb,
-            $prepared['uri'],
-            $prepared['options'],
+            $method,
             $parameters
         );
 
