@@ -1,8 +1,8 @@
 <?php
 
-namespace DarrynTen\PilotLive\Tests\PilotLive\Request;
+namespace DarrynTen\Courierit\Tests\Courierit\Request;
 
-use DarrynTen\PilotLive\Request\RequestHandler;
+use DarrynTen\Courierit\Request\RequestHandler;
 use InterNations\Component\HttpMock\PHPUnit\HttpMockTrait;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;

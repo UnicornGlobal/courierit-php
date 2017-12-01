@@ -1,18 +1,18 @@
 <?php
 /**
- * PilotLive Library
+ * Courierit Library
  *
  * @category Library
- * @package  PilotLive
+ * @package  Courierit
  * @author   Darryn Ten <darrynten@github.com>
- * @license  MIT <https://github.com/darrynten/pilot-live-php/blob/master/LICENSE>
- * @link     https://github.com/darrynten/pilot-live-php
+ * @license  MIT <https://github.com/darrynten/courierit-php/blob/master/LICENSE>
+ * @link     https://github.com/darrynten/courierit-php
  */
 
-namespace DarrynTen\PilotLive\Request;
+namespace DarrynTen\Courierit\Request;
 
-use DarrynTen\PilotLive\Exception\RequestHandlerException;
-use DarrynTen\PilotLive\Exception\ExceptionMessages;
+use DarrynTen\Courierit\Exception\RequestHandlerException;
+use DarrynTen\Courierit\Exception\ExceptionMessages;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -23,10 +23,10 @@ use GuzzleHttp\Exception\ServerException;
  * RequestHandler Class
  *
  * @category Library
- * @package  PilotLive
+ * @package  Courierit
  * @author   Darryn Ten <darrynten@github.com>
- * @license  MIT <https://github.com/darrynten/pilot-live-php/blob/master/LICENSE>
- * @link     https://github.com/darrynten/pilot-live-php
+ * @license  MIT <https://github.com/darrynten/courierit-php/blob/master/LICENSE>
+ * @link     https://github.com/darrynten/courierit-php
  */
 class RequestHandler
 {
@@ -38,7 +38,7 @@ class RequestHandler
     private $client;
 
     /**
-     * The PilotLive url
+     * The Courierit url
      *
      * @var string $endpoint
      */
@@ -148,7 +148,7 @@ class RequestHandler
     }
 
     /**
-     * Get token for PilotLive API requests
+     * Get token for Courierit API requests
      *
      * @return string
      */
@@ -188,7 +188,7 @@ class RequestHandler
     }
 
     /**
-     * Makes a request to PilotLive
+     * Makes a request to Courierit
      *
      * @param string $verb The API method
      * @param string $path The path
