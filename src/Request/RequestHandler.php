@@ -58,6 +58,7 @@ class RequestHandler
         $this->client = new \SoapClient($this->wsdl,
             [
                 'soap_version'   => SOAP_1_2,
+                'exceptions'     => true,
                 //May need address too
 
             ]);
@@ -85,13 +86,11 @@ class RequestHandler
     }
 
     /**
-     * Makes a request using Guzzle
+     * Makes a request using SoapClient
      *
      * @param string $method The services method
      * @param array $parameters Request parameters
      * @return stdClass
-     * @internal param string $verb The HTTP request verb (GET/POST/etc)
-     * @internal param string $service The api service
      * @internal param array $options Request options
      * @see RequestHandler::request()
      *
@@ -113,8 +112,8 @@ class RequestHandler
      */
     private function handleException($exception)
     {
-        $code = $exception->getCode();
-        $message = $exception->getMessage();
+        $code = $exception->faultcode();
+        $message = $exception->faultstring();
 
         $title = sprintf(
             '%s: %s - %s',
@@ -132,9 +131,6 @@ class RequestHandler
      * @param string $method
      * @param array $parameters The request parameters
      * @return stdClass
-     *
-     * @internal param string $verb The API method
-     * @internal param string $path The path
      * @internal param bool $returnResponse If set to true, returns actual response
      *
      */
