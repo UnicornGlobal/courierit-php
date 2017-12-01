@@ -33,13 +33,6 @@ class RequestHandler
     private $client;
 
     /**
-     * The Courierit url
-     *
-     * @var string $endpoint
-     */
-    public $endpoint = 'http://www.citwebservices.co.za/citwebservices.asmx';
-
-    /**
      * The WSDL address
      *
      * @var string $wsdl
@@ -53,7 +46,9 @@ class RequestHandler
      */
     public function __construct(array $config)
     {
-        $this->endpoint = $config['endpoint'];
+        if(array_key_exists('wsdl', $config)){
+            $this->wsdl = $config['wsdl'];
+        }
 
         $this->client = new \SoapClient($this->wsdl,
             [

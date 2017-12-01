@@ -19,9 +19,9 @@ class Config
     /**
      * The endpoint
      *
-     * @var string $endpoint
+     * @var string wsdl
      */
-    public $endpoint = 'http://www.citwebservices.co.za/citwebservices.asmx';
+    public $wsdl = 'http://www.citwebservices.co.za/citwebservices.asmx?WSDL';
 
     /**
      * Construct the config object
@@ -45,8 +45,8 @@ class Config
      */
     private function checkAndSetOverrides($config)
     {
-        if (isset($config['endpoint']) && !empty($config['endpoint'])) {
-            $this->endpoint = (string)$config['endpoint'];
+        if (isset($config['wsdl']) && !empty($config['wsdl'])) {
+            $this->wsdl = (string)$config['wsdl'];
         }
     }
 
@@ -58,7 +58,7 @@ class Config
     public function getRequestHandlerConfig()
     {
         $config = [
-            'endpoint' => $this->endpoint,
+            'wsdl' => $this->wsdl,
         ];
 
         return $config;

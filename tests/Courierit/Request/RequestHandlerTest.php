@@ -13,7 +13,7 @@ class RequestHandlerTest extends \PHPUnit_Framework_TestCase
 
     public function testSoap(){
         $config = [
-            'endpoint' => 'http://www.citwebservices.co.za/citwebservices.asmx'
+            'wsdl' => 'http://www.citwebservices.co.za/citwebservices.asmx?WSDL'
         ];
         $parameters = [
             'UserName' => 'test',
