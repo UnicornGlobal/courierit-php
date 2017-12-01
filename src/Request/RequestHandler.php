@@ -14,11 +14,6 @@ namespace DarrynTen\Courierit\Request;
 use DarrynTen\Courierit\Exception\RequestHandlerException;
 use DarrynTen\Courierit\Exception\ExceptionMessages;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\ServerException;
-
 /**
  * RequestHandler Class
  *
@@ -31,9 +26,9 @@ use GuzzleHttp\Exception\ServerException;
 class RequestHandler
 {
     /**
-     * GuzzleHttp Client
+     * Soap Client
      *
-     * @var Client $client
+     * @var \SoapClient $client
      */
     private $client;
 
@@ -58,45 +53,31 @@ class RequestHandler
      */
     public function __construct(array $config)
     {
-        $this->key = $config['key'];
         $this->endpoint = $config['endpoint'];
 
-        $this->client = new Client();
+        $this->client = new \SoapClient($this->wsdl,
+            [
+                'soap_version'   => SOAP_1_2,
+                //May need address too
+
+            ]);
     }
 
     /**
-     * Makes a request using Guzzle
+     * Makes a request using Soap Client
      *
-     * @param string $verb The HTTP request verb (GET/POST/etc)
-     * @param string $service The api service
      * @param string $method The services method
-     * @param array $options Request options
      * @param array $parameters Request parameters
-     *
      * @return stdClass
-     * @throws RequestHandlerException
+     * @internal param string $verb The HTTP request verb (GET/POST/etc)
+     * @internal param string $service The api service
+     * @internal param array $options Request options
      */
-    public function makeRequest(string $method, string $uri, array $options, array $parameters)
+    public function makeRequest(string $method, array $parameters)
     {
-        if (!in_array($method, $this->verbs)) {
-            throw new RequestHandlerException('405 Bad HTTP Verb', RequestHandlerException::HTTP_VERB_ERROR);
-        }
-
-        if (!empty($parameters)) {
-            if ($method === 'GET') {
-                // Send as get params
-                foreach ($parameters as $key => $value) {
-                    $options['query'][$key] = $value;
-                }
-            } elseif ($method === 'POST') {
-                // Otherwise ?
-                $options['json'] = $parameters;
-            }
-        }
-
         try {
-            $response = $this->client->request($method, $uri, $options);
-        } catch (RequestException $exception) {
+            $response = $this->client->__soapCall($method, $parameters);
+        } catch (\SoapFault $exception) {
             $this->handleException($exception);
         }
 
@@ -106,20 +87,18 @@ class RequestHandler
     /**
      * Makes a request using Guzzle
      *
-     * @param string $verb The HTTP request verb (GET/POST/etc)
-     * @param string $service The api service
      * @param string $method The services method
-     * @param array $options Request options
      * @param array $parameters Request parameters
-     *
+     * @return stdClass
+     * @internal param string $verb The HTTP request verb (GET/POST/etc)
+     * @internal param string $service The api service
+     * @internal param array $options Request options
      * @see RequestHandler::request()
      *
-     * @return stdClass
-     * @throws ApiException
      */
-    public function handleRequest(string $method, string $uri, array $options, array $parameters = [])
+    public function handleRequest(string $method, array $parameters = [])
     {
-        $response = $this->makeRequest($method, $uri, $options, $parameters);
+        $response = $this->makeRequest($method, $parameters);
 
         return json_decode($response->getBody());
     }
@@ -148,65 +127,21 @@ class RequestHandler
     }
 
     /**
-     * Get token for Courierit API requests
-     *
-     * @return string
-     */
-    private function getAuthToken()
-    {
-        // TODO what is GetGatewayKey?requestKey={REQUESTKEY}
-        // Is perhaps some type of auth?
-        return $this->key;
-    }
-
-    /**
-     * Prepares request
-     *
-     * @param string $method The API method
-     * @param string $service The path
-     *
-     * @return []
-     *
-     * @throws RequestHandlerException
-     */
-    private function prepareRequest(string $service, string $method)
-    {
-        // We always add the API key to the URL
-        $options['query']['ApiKey'] = $this->getAuthToken();
-
-        $uri = sprintf(
-            '%s/%s/%s/',
-            $this->endpoint,
-            $service,
-            $method
-        );
-
-        return [
-            'uri' => $uri,
-            'options' => $options
-        ];
-    }
-
-    /**
      * Makes a request to Courierit
      *
-     * @param string $verb The API method
-     * @param string $path The path
+     * @param string $method
      * @param array $parameters The request parameters
-     * @param bool $returnResponse If set to true, returns actual response
+     * @return stdClass
      *
-     * @return []
+     * @internal param string $verb The API method
+     * @internal param string $path The path
+     * @internal param bool $returnResponse If set to true, returns actual response
      *
-     * @throws ApiException
      */
-    public function request(string $verb, string $service, string $method, array $parameters = [])
+    public function request(string $method, array $parameters = [])
     {
-        $prepared = $this->prepareRequest($service, $method);
-
         return $this->handleRequest(
-            $verb,
-            $prepared['uri'],
-            $prepared['options'],
+            $method,
             $parameters
         );
     }
