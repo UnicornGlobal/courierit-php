@@ -17,7 +17,7 @@ use DarrynTen\Courierit\Exception\RequestHandlerException;
 class Config
 {
     /**
-     * The endpoint
+     * The wsdl endpoint
      *
      * @var string wsdl
      */
