@@ -37,7 +37,7 @@ class RequestHandler
      *
      * @var string $wsdl
      */
-    private $wsdl = 'http://www.citwebservices.co.za/citwebservices.asmx?WSDL';
+    private $wsdl;
 
     /**
      * Request handler constructor
@@ -54,8 +54,6 @@ class RequestHandler
             [
                 'soap_version'   => SOAP_1_2,
                 'exceptions'     => true,
-                //May need address too
-
             ]);
     }
 

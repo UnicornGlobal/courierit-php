@@ -2,6 +2,7 @@
 
 namespace DarrynTen\Courierit\Tests\Courierit\Request;
 
+use DarrynTen\Courierit\Config;
 use DarrynTen\Courierit\Request\RequestHandler;
 use InterNations\Component\HttpMock\PHPUnit\HttpMockTrait;
 
@@ -12,15 +13,21 @@ class RequestHandlerTest extends \PHPUnit_Framework_TestCase
 
 
     public function testSoap(){
-        $config = [
-            'wsdl' => 'http://www.citwebservices.co.za/citwebservices.asmx?WSDL'
-        ];
         $parameters = [
             'UserName' => 'test',
             'Password' => 'test',
         ];
-        $client = new RequestHandler($config);
-        $response = $client->requestRaw("Login", $parameters);
-        var_dump($response);
+        $config = new Config([]);
+
+        $soapClientMock = $this->getMockFromWsdl($config->getRequestHandlerConfig()['wsdl']);
+
+        $result = new \stdClass();
+        $result->LoginResult = '-1';
+
+        $soapClientMock->expects($this->any())
+                       ->method('Login')
+                       ->will($this->returnValue($result));
+
+        $this->assertEquals($result, $soapClientMock->Login($parameters));
     }
 }
