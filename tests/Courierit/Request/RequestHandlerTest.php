@@ -16,8 +16,12 @@ class RequestHandlerTest extends \PHPUnit_Framework_TestCase
         $parameters = [
             'UserName' => 'test',
             'Password' => 'test',
+
         ];
-        $config = new Config([]);
+        $wsdl = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'wsdl.xml';
+        $config = new Config([
+            'wsdl'     => $wsdl
+        ]);
 
         $soapClientMock = $this->getMockFromWsdl($config->getRequestHandlerConfig()['wsdl']);
 
