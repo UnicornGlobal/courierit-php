@@ -1,29 +1,14 @@
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://citjnb.co.za/citwebservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://citjnb.co.za/citwebservices/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" 
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+    xmlns:tns="http://citjnb.co.za/citwebservices/" 
+    xmlns:s="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+    xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://citjnb.co.za/citwebservices/">
     <wsdl:types>
         <s:schema elementFormDefault="qualified" targetNamespace="http://citjnb.co.za/citwebservices/">
-            <s:element name="IsPargo">
-                <s:complexType>
-                    <s:sequence>
-                        <s:element minOccurs="0" maxOccurs="1" name="strWaybill" type="s:string"/>
-                        <s:element minOccurs="0" maxOccurs="1" name="strAccount" type="s:string"/>
-                        <s:element minOccurs="0" maxOccurs="1" name="strSiteID" type="s:string"/>
-                        <s:element minOccurs="0" maxOccurs="1" name="strInHouseHub" type="s:string"/>
-                    </s:sequence>
-                </s:complexType>
-            </s:element>
-            <s:element name="IsPargoResponse">
-                <s:complexType>
-                    <s:sequence>
-                        <s:element minOccurs="0" maxOccurs="1" name="IsPargoResult">
-                            <s:complexType mixed="true">
-                                <s:sequence>
-                                    <s:any/>
-                                </s:sequence>
-                            </s:complexType>
-                        </s:element>
-                    </s:sequence>
-                </s:complexType>
-            </s:element>
             <s:element name="GetCITQuoteBySubId">
                 <s:complexType>
                     <s:sequence>
@@ -713,6 +698,482 @@
                     </s:sequence>
                 </s:complexType>
             </s:element>
+            <s:element name="GetNonCITExceptionsWithConsignor">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDateFrom" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDateTo" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetNonCITExceptionsWithConsignorResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetNonCITExceptionsWithConsignorResult">
+                            <s:complexType>
+                                <s:sequence>
+                                    <s:element ref="s:schema"/>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetTrackingWithConsigneeDetailXML">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNo" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetTrackingWithConsigneeDetailXMLResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetTrackingWithConsigneeDetailXMLResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AddDURDistributionData">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDistrSiteID" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSiteName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCompanyName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strStreetAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strStreetAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strStreetCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strTelephone" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactCell" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNo" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strPieces" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strBarcode1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strIDNumber" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AddDURDistributionDataResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AddDURDistributionDataResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateInHouseSubmission">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strHub" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCompanyName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine4" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine5" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactTelephoneCell" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strService" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSpecialInstructions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strTotalPieces" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDimensions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue5" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateInHouseSubmissionResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UpdateInHouseSubmissionResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetTrackingDatasetWithExtraData">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNo" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetTrackingDatasetWithExtraDataResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetTrackingDatasetWithExtraDataResult">
+                            <s:complexType>
+                                <s:sequence>
+                                    <s:element ref="s:schema"/>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetTrackingDatasetOOD">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strFromDate" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToDate" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetTrackingDatasetOODResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetTrackingDatasetOODResult">
+                            <s:complexType>
+                                <s:sequence>
+                                    <s:element ref="s:schema"/>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AddInhouseWaybill">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSiteID" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strShippersReference" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCompanyName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSuburbId" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactTelephone" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactCellNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactEmail" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContents" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strService" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsurance" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsuranceValue" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSpecialInstructions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSaturdayDelivery" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strPublicHoliday" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strTotalPieces" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDimensions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strBarCodeNumbers" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCollectOnDelivery" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCollectionWaybillNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRica" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaText" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaAddressLine3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strIDVerification" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strIDNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue4" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue5" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AddInhouseWaybillResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AddInhouseWaybillResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetFullAddressDetailsXML">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetFullAddressDetailsXMLResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetFullAddressDetailsXMLResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateInhousePieces">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="sUsername" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="sWaybills" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="sPieces" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="sAccountNumber" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateInhousePiecesResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UpdateInhousePiecesResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCITQuoteChargeODO">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strService" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strReference" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorSubId" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneeSubId" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDimensions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSaturday" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAfterHours" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strNextDay" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsurance" type="s:string"/>
+                        <s:element minOccurs="1" maxOccurs="1" name="dblValueForInsurance" type="s:double"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCITQuoteChargeODOResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetCITQuoteChargeODOResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateAndLogInHouseData">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine4" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine5" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactTelephoneCell" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strTotalPieces" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="UpdateAndLogInHouseDataResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UpdateAndLogInHouseDataResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCITQuoteForPlugin">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strService" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strReference" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneeSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneePostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneeCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDimensions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSaturday" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAfterHours" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strNextDay" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsurance" type="s:string"/>
+                        <s:element minOccurs="1" maxOccurs="1" name="dblValueForInsurance" type="s:double"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCITQuoteForPluginResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetCITQuoteForPluginResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCitQuoteChargeODOManual">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strService" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strReference" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsignorCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneeSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneePostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strConsigneeCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDimensions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSaturday" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAfterHours" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strNextDay" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsurance" type="s:string"/>
+                        <s:element minOccurs="1" maxOccurs="1" name="dblValueForInsurance" type="s:double"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="GetCitQuoteChargeODOManualResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="GetCitQuoteChargeODOManualResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AddCITWaybill2018">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSiteID" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strShippersReference" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCompanyName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressLine3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDeliveryAddressPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactName" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactTelephone" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactCellNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContactEmail" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strContents" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strService" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsurance" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInsuranceValue" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSpecialInstructions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSaturdayDelivery" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strPublicHoliday" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strTotalPieces" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strDimensions" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strBarCodeNumbers" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCollectOnDelivery" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCollectionWaybillNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRica" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaText" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaAddressLine1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaAddressLine2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaAddressLine3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaSuburb" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaCity" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strRicaPostCode" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strIDVerification" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strIDNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue1" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue2" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue3" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue4" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strCustomValue5" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AddCITWaybill2018Response">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AddCITWaybill2018Result">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
             <s:element name="GetTrackingDataset">
                 <s:complexType>
                     <s:sequence>
@@ -909,30 +1370,6 @@
                 <s:complexType>
                     <s:sequence>
                         <s:element minOccurs="0" maxOccurs="1" name="GetDailyPODsDatasetResult">
-                            <s:complexType>
-                                <s:sequence>
-                                    <s:element ref="s:schema"/>
-                                    <s:any/>
-                                </s:sequence>
-                            </s:complexType>
-                        </s:element>
-                    </s:sequence>
-                </s:complexType>
-            </s:element>
-            <s:element name="GetPODDatasetByWaybillNumber">
-                <s:complexType>
-                    <s:sequence>
-                        <s:element minOccurs="0" maxOccurs="1" name="strUsername" type="s:string"/>
-                        <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string"/>
-                        <s:element minOccurs="0" maxOccurs="1" name="strAccountNo" type="s:string"/>
-                        <s:element minOccurs="0" maxOccurs="1" name="strWaybillNumber" type="s:string"/>
-                    </s:sequence>
-                </s:complexType>
-            </s:element>
-            <s:element name="GetPODDatasetByWaybillNumberResponse">
-                <s:complexType>
-                    <s:sequence>
-                        <s:element minOccurs="0" maxOccurs="1" name="GetPODDatasetByWaybillNumberResult">
                             <s:complexType>
                                 <s:sequence>
                                     <s:element ref="s:schema"/>
@@ -2596,14 +3033,31 @@
                     </s:sequence>
                 </s:complexType>
             </s:element>
+            <s:element name="IsPargo">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="strWaybill" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strAccount" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strSiteID" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="strInHouseHub" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="IsPargoResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="IsPargoResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
         </s:schema>
     </wsdl:types>
-    <wsdl:message name="IsPargoSoapIn">
-        <wsdl:part name="parameters" element="tns:IsPargo"/>
-    </wsdl:message>
-    <wsdl:message name="IsPargoSoapOut">
-        <wsdl:part name="parameters" element="tns:IsPargoResponse"/>
-    </wsdl:message>
     <wsdl:message name="GetCITQuoteBySubIdSoapIn">
         <wsdl:part name="parameters" element="tns:GetCITQuoteBySubId"/>
     </wsdl:message>
@@ -2724,6 +3178,90 @@
     <wsdl:message name="GetInHousePargoDataXMLSoapOut">
         <wsdl:part name="parameters" element="tns:GetInHousePargoDataXMLResponse"/>
     </wsdl:message>
+    <wsdl:message name="GetNonCITExceptionsWithConsignorSoapIn">
+        <wsdl:part name="parameters" element="tns:GetNonCITExceptionsWithConsignor"/>
+    </wsdl:message>
+    <wsdl:message name="GetNonCITExceptionsWithConsignorSoapOut">
+        <wsdl:part name="parameters" element="tns:GetNonCITExceptionsWithConsignorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetTrackingWithConsigneeDetailXMLSoapIn">
+        <wsdl:part name="parameters" element="tns:GetTrackingWithConsigneeDetailXML"/>
+    </wsdl:message>
+    <wsdl:message name="GetTrackingWithConsigneeDetailXMLSoapOut">
+        <wsdl:part name="parameters" element="tns:GetTrackingWithConsigneeDetailXMLResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AddDURDistributionDataSoapIn">
+        <wsdl:part name="parameters" element="tns:AddDURDistributionData"/>
+    </wsdl:message>
+    <wsdl:message name="AddDURDistributionDataSoapOut">
+        <wsdl:part name="parameters" element="tns:AddDURDistributionDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateInHouseSubmissionSoapIn">
+        <wsdl:part name="parameters" element="tns:UpdateInHouseSubmission"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateInHouseSubmissionSoapOut">
+        <wsdl:part name="parameters" element="tns:UpdateInHouseSubmissionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetTrackingDatasetWithExtraDataSoapIn">
+        <wsdl:part name="parameters" element="tns:GetTrackingDatasetWithExtraData"/>
+    </wsdl:message>
+    <wsdl:message name="GetTrackingDatasetWithExtraDataSoapOut">
+        <wsdl:part name="parameters" element="tns:GetTrackingDatasetWithExtraDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetTrackingDatasetOODSoapIn">
+        <wsdl:part name="parameters" element="tns:GetTrackingDatasetOOD"/>
+    </wsdl:message>
+    <wsdl:message name="GetTrackingDatasetOODSoapOut">
+        <wsdl:part name="parameters" element="tns:GetTrackingDatasetOODResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AddInhouseWaybillSoapIn">
+        <wsdl:part name="parameters" element="tns:AddInhouseWaybill"/>
+    </wsdl:message>
+    <wsdl:message name="AddInhouseWaybillSoapOut">
+        <wsdl:part name="parameters" element="tns:AddInhouseWaybillResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetFullAddressDetailsXMLSoapIn">
+        <wsdl:part name="parameters" element="tns:GetFullAddressDetailsXML"/>
+    </wsdl:message>
+    <wsdl:message name="GetFullAddressDetailsXMLSoapOut">
+        <wsdl:part name="parameters" element="tns:GetFullAddressDetailsXMLResponse"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateInhousePiecesSoapIn">
+        <wsdl:part name="parameters" element="tns:UpdateInhousePieces"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateInhousePiecesSoapOut">
+        <wsdl:part name="parameters" element="tns:UpdateInhousePiecesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetCITQuoteChargeODOSoapIn">
+        <wsdl:part name="parameters" element="tns:GetCITQuoteChargeODO"/>
+    </wsdl:message>
+    <wsdl:message name="GetCITQuoteChargeODOSoapOut">
+        <wsdl:part name="parameters" element="tns:GetCITQuoteChargeODOResponse"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateAndLogInHouseDataSoapIn">
+        <wsdl:part name="parameters" element="tns:UpdateAndLogInHouseData"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateAndLogInHouseDataSoapOut">
+        <wsdl:part name="parameters" element="tns:UpdateAndLogInHouseDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetCITQuoteForPluginSoapIn">
+        <wsdl:part name="parameters" element="tns:GetCITQuoteForPlugin"/>
+    </wsdl:message>
+    <wsdl:message name="GetCITQuoteForPluginSoapOut">
+        <wsdl:part name="parameters" element="tns:GetCITQuoteForPluginResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetCitQuoteChargeODOManualSoapIn">
+        <wsdl:part name="parameters" element="tns:GetCitQuoteChargeODOManual"/>
+    </wsdl:message>
+    <wsdl:message name="GetCitQuoteChargeODOManualSoapOut">
+        <wsdl:part name="parameters" element="tns:GetCitQuoteChargeODOManualResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AddCITWaybill2018SoapIn">
+        <wsdl:part name="parameters" element="tns:AddCITWaybill2018"/>
+    </wsdl:message>
+    <wsdl:message name="AddCITWaybill2018SoapOut">
+        <wsdl:part name="parameters" element="tns:AddCITWaybill2018Response"/>
+    </wsdl:message>
     <wsdl:message name="GetTrackingDatasetSoapIn">
         <wsdl:part name="parameters" element="tns:GetTrackingDataset"/>
     </wsdl:message>
@@ -2777,12 +3315,6 @@
     </wsdl:message>
     <wsdl:message name="GetDailyPODsDatasetSoapOut">
         <wsdl:part name="parameters" element="tns:GetDailyPODsDatasetResponse"/>
-    </wsdl:message>
-    <wsdl:message name="GetPODDatasetByWaybillNumberSoapIn">
-        <wsdl:part name="parameters" element="tns:GetPODDatasetByWaybillNumber"/>
-    </wsdl:message>
-    <wsdl:message name="GetPODDatasetByWaybillNumberSoapOut">
-        <wsdl:part name="parameters" element="tns:GetPODDatasetByWaybillNumberResponse"/>
     </wsdl:message>
     <wsdl:message name="GetDailyExceptionsXMLSoapIn">
         <wsdl:part name="parameters" element="tns:GetDailyExceptionsXML"/>
@@ -3120,11 +3652,13 @@
     <wsdl:message name="GetTrackingDetailsServiceFilterSoapOut">
         <wsdl:part name="parameters" element="tns:GetTrackingDetailsServiceFilterResponse"/>
     </wsdl:message>
+    <wsdl:message name="IsPargoSoapIn">
+        <wsdl:part name="parameters" element="tns:IsPargo"/>
+    </wsdl:message>
+    <wsdl:message name="IsPargoSoapOut">
+        <wsdl:part name="parameters" element="tns:IsPargoResponse"/>
+    </wsdl:message>
     <wsdl:portType name="CITWebServicesSoap">
-        <wsdl:operation name="IsPargo">
-            <wsdl:input message="tns:IsPargoSoapIn"/>
-            <wsdl:output message="tns:IsPargoSoapOut"/>
-        </wsdl:operation>
         <wsdl:operation name="GetCITQuoteBySubId">
             <wsdl:input message="tns:GetCITQuoteBySubIdSoapIn"/>
             <wsdl:output message="tns:GetCITQuoteBySubIdSoapOut"/>
@@ -3205,6 +3739,62 @@
             <wsdl:input message="tns:GetInHousePargoDataXMLSoapIn"/>
             <wsdl:output message="tns:GetInHousePargoDataXMLSoapOut"/>
         </wsdl:operation>
+        <wsdl:operation name="GetNonCITExceptionsWithConsignor">
+            <wsdl:input message="tns:GetNonCITExceptionsWithConsignorSoapIn"/>
+            <wsdl:output message="tns:GetNonCITExceptionsWithConsignorSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingWithConsigneeDetailXML">
+            <wsdl:input message="tns:GetTrackingWithConsigneeDetailXMLSoapIn"/>
+            <wsdl:output message="tns:GetTrackingWithConsigneeDetailXMLSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddDURDistributionData">
+            <wsdl:input message="tns:AddDURDistributionDataSoapIn"/>
+            <wsdl:output message="tns:AddDURDistributionDataSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateInHouseSubmission">
+            <wsdl:input message="tns:UpdateInHouseSubmissionSoapIn"/>
+            <wsdl:output message="tns:UpdateInHouseSubmissionSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingDatasetWithExtraData">
+            <wsdl:input message="tns:GetTrackingDatasetWithExtraDataSoapIn"/>
+            <wsdl:output message="tns:GetTrackingDatasetWithExtraDataSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingDatasetOOD">
+            <wsdl:input message="tns:GetTrackingDatasetOODSoapIn"/>
+            <wsdl:output message="tns:GetTrackingDatasetOODSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddInhouseWaybill">
+            <wsdl:input message="tns:AddInhouseWaybillSoapIn"/>
+            <wsdl:output message="tns:AddInhouseWaybillSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetFullAddressDetailsXML">
+            <wsdl:input message="tns:GetFullAddressDetailsXMLSoapIn"/>
+            <wsdl:output message="tns:GetFullAddressDetailsXMLSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateInhousePieces">
+            <wsdl:input message="tns:UpdateInhousePiecesSoapIn"/>
+            <wsdl:output message="tns:UpdateInhousePiecesSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetCITQuoteChargeODO">
+            <wsdl:input message="tns:GetCITQuoteChargeODOSoapIn"/>
+            <wsdl:output message="tns:GetCITQuoteChargeODOSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateAndLogInHouseData">
+            <wsdl:input message="tns:UpdateAndLogInHouseDataSoapIn"/>
+            <wsdl:output message="tns:UpdateAndLogInHouseDataSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetCITQuoteForPlugin">
+            <wsdl:input message="tns:GetCITQuoteForPluginSoapIn"/>
+            <wsdl:output message="tns:GetCITQuoteForPluginSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetCitQuoteChargeODOManual">
+            <wsdl:input message="tns:GetCitQuoteChargeODOManualSoapIn"/>
+            <wsdl:output message="tns:GetCitQuoteChargeODOManualSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddCITWaybill2018">
+            <wsdl:input message="tns:AddCITWaybill2018SoapIn"/>
+            <wsdl:output message="tns:AddCITWaybill2018SoapOut"/>
+        </wsdl:operation>
         <wsdl:operation name="GetTrackingDataset">
             <wsdl:input message="tns:GetTrackingDatasetSoapIn"/>
             <wsdl:output message="tns:GetTrackingDatasetSoapOut"/>
@@ -3240,10 +3830,6 @@
         <wsdl:operation name="GetDailyPODsDataset">
             <wsdl:input message="tns:GetDailyPODsDatasetSoapIn"/>
             <wsdl:output message="tns:GetDailyPODsDatasetSoapOut"/>
-        </wsdl:operation>
-        <wsdl:operation name="GetPODDatasetByWaybillNumber">
-            <wsdl:input message="tns:GetPODDatasetByWaybillNumberSoapIn"/>
-            <wsdl:output message="tns:GetPODDatasetByWaybillNumberSoapOut"/>
         </wsdl:operation>
         <wsdl:operation name="GetDailyExceptionsXML">
             <wsdl:input message="tns:GetDailyExceptionsXMLSoapIn"/>
@@ -3469,18 +4055,13 @@
             <wsdl:input message="tns:GetTrackingDetailsServiceFilterSoapIn"/>
             <wsdl:output message="tns:GetTrackingDetailsServiceFilterSoapOut"/>
         </wsdl:operation>
+        <wsdl:operation name="IsPargo">
+            <wsdl:input message="tns:IsPargoSoapIn"/>
+            <wsdl:output message="tns:IsPargoSoapOut"/>
+        </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="CITWebServicesSoap" type="tns:CITWebServicesSoap">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
-        <wsdl:operation name="IsPargo">
-            <soap:operation soapAction="http://citjnb.co.za/citwebservices/IsPargo" style="document"/>
-            <wsdl:input>
-                <soap:body use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
         <wsdl:operation name="GetCITQuoteBySubId">
             <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetCITQuoteBySubId" style="document"/>
             <wsdl:input>
@@ -3661,6 +4242,132 @@
                 <soap:body use="literal"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="GetNonCITExceptionsWithConsignor">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetNonCITExceptionsWithConsignor" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingWithConsigneeDetailXML">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingWithConsigneeDetailXML" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddDURDistributionData">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/AddDURDistributionData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateInHouseSubmission">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/UpdateInHouseSubmission" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingDatasetWithExtraData">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDatasetWithExtraData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingDatasetOOD">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDatasetOOD" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddInhouseWaybill">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/AddInhouseWaybill" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetFullAddressDetailsXML">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetFullAddressDetailsXML" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateInhousePieces">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/UpdateInhousePieces" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCITQuoteChargeODO">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetCITQuoteChargeODO" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateAndLogInHouseData">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/UpdateAndLogInHouseData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCITQuoteForPlugin">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetCITQuoteForPlugin" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCitQuoteChargeODOManual">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetCitQuoteChargeODOManual" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddCITWaybill2018">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/AddCITWaybill2018" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
         <wsdl:operation name="GetTrackingDataset">
             <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDataset" style="document"/>
             <wsdl:input>
@@ -3735,15 +4442,6 @@
         </wsdl:operation>
         <wsdl:operation name="GetDailyPODsDataset">
             <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetDailyPODsDataset" style="document"/>
-            <wsdl:input>
-                <soap:body use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-        <wsdl:operation name="GetPODDatasetByWaybillNumber">
-            <soap:operation soapAction="http://citjnb.co.za/citwebservices/GetPODDatasetByWaybillNumber" style="document"/>
             <wsdl:input>
                 <soap:body use="literal"/>
             </wsdl:input>
@@ -4255,18 +4953,18 @@
                 <soap:body use="literal"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="IsPargo">
+            <soap:operation soapAction="http://citjnb.co.za/citwebservices/IsPargo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
     </wsdl:binding>
     <wsdl:binding name="CITWebServicesSoap12" type="tns:CITWebServicesSoap">
         <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
-        <wsdl:operation name="IsPargo">
-            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/IsPargo" style="document"/>
-            <wsdl:input>
-                <soap12:body use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap12:body use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
         <wsdl:operation name="GetCITQuoteBySubId">
             <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetCITQuoteBySubId" style="document"/>
             <wsdl:input>
@@ -4447,6 +5145,132 @@
                 <soap12:body use="literal"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="GetNonCITExceptionsWithConsignor">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetNonCITExceptionsWithConsignor" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingWithConsigneeDetailXML">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingWithConsigneeDetailXML" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddDURDistributionData">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/AddDURDistributionData" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateInHouseSubmission">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/UpdateInHouseSubmission" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingDatasetWithExtraData">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDatasetWithExtraData" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTrackingDatasetOOD">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDatasetOOD" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddInhouseWaybill">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/AddInhouseWaybill" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetFullAddressDetailsXML">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetFullAddressDetailsXML" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateInhousePieces">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/UpdateInhousePieces" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCITQuoteChargeODO">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetCITQuoteChargeODO" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateAndLogInHouseData">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/UpdateAndLogInHouseData" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCITQuoteForPlugin">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetCITQuoteForPlugin" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCitQuoteChargeODOManual">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetCitQuoteChargeODOManual" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddCITWaybill2018">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/AddCITWaybill2018" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
         <wsdl:operation name="GetTrackingDataset">
             <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDataset" style="document"/>
             <wsdl:input>
@@ -4521,15 +5345,6 @@
         </wsdl:operation>
         <wsdl:operation name="GetDailyPODsDataset">
             <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetDailyPODsDataset" style="document"/>
-            <wsdl:input>
-                <soap12:body use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap12:body use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-        <wsdl:operation name="GetPODDatasetByWaybillNumber">
-            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetPODDatasetByWaybillNumber" style="document"/>
             <wsdl:input>
                 <soap12:body use="literal"/>
             </wsdl:input>
@@ -5034,6 +5849,15 @@
         </wsdl:operation>
         <wsdl:operation name="GetTrackingDetailsServiceFilter">
             <soap12:operation soapAction="http://citjnb.co.za/citwebservices/GetTrackingDetailsServiceFilter" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="IsPargo">
+            <soap12:operation soapAction="http://citjnb.co.za/citwebservices/IsPargo" style="document"/>
             <wsdl:input>
                 <soap12:body use="literal"/>
             </wsdl:input>

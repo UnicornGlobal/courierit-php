@@ -92,7 +92,7 @@ class RequestHandler
     {
         $response = $this->makeRequest($method, $parameters);
 
-        return json_decode($response->getBody());
+        return ($response);
     }
 
     /**
