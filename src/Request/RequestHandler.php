@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Courierit Library
  *
@@ -46,15 +47,17 @@ class RequestHandler
      */
     public function __construct(array $config)
     {
-        if(array_key_exists('wsdl', $config)){
+        if (array_key_exists('wsdl', $config)) {
             $this->wsdl = $config['wsdl'];
         }
 
-        $this->client = new \SoapClient($this->wsdl,
+        $this->client = new \SoapClient(
+            $this->wsdl,
             [
-                'soap_version'   => SOAP_1_2,
-                'exceptions'     => true,
-            ]);
+                'soap_version' => SOAP_1_2,
+                'exceptions' => true,
+            ]
+        );
     }
 
     /**
@@ -70,7 +73,7 @@ class RequestHandler
     public function makeRequest(string $method, array $parameters)
     {
         try {
-            $response = $this->client->__soapCall($method, $parameters);
+            $response = $this->client->__soapCall($method, array($parameters));
         } catch (\SoapFault $exception) {
             $this->handleException($exception);
         }
