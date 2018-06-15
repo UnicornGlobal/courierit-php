@@ -63,10 +63,29 @@ class RequestHandler
     /**
      * Add a waybill with attached collection request
      */
-    public function addClientWaybillWithCollectionRequest($params =[])
+    public function addClientWaybillWithCollectionRequest($params = [])
     {
         try {
             $response = $this->client->addClientWaybillWithCollectionRequest($params);
+        } catch (\SoapFault $exception) {
+            $this->handleException($exception);
+        }
+
+        return $response;
+    }
+
+    /**
+     * Login
+     */
+    public function Login($username, $password)
+    {
+        $params = [
+            'strUserName' => $username,
+            'strPassword' => $password,
+        ];
+
+        try {
+            $response = $this->client->Login($params);
         } catch (\SoapFault $exception) {
             $this->handleException($exception);
         }
