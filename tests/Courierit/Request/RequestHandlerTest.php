@@ -9,9 +9,6 @@ use InterNations\Component\HttpMock\PHPUnit\HttpMockTrait;
 class RequestHandlerTest extends \PHPUnit_Framework_TestCase
 {
     use HttpMockTrait;
-
-
-
     public function testSoap(){
         $parameters = [
             'UserName' => 'test',
