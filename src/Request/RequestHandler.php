@@ -61,6 +61,39 @@ class RequestHandler
     }
 
     /**
+     * Add a waybill with attached collection request
+     */
+    public function addClientWaybillWithCollectionRequest($params = [])
+    {
+        try {
+            $response = $this->client->addClientWaybillWithCollectionRequest($params);
+        } catch (\SoapFault $exception) {
+            $this->handleException($exception);
+        }
+
+        return $response;
+    }
+
+    /**
+     * Login
+     */
+    public function Login($username, $password)
+    {
+        $params = [
+            'strUserName' => $username,
+            'strPassword' => $password,
+        ];
+
+        try {
+            $response = $this->client->Login($params);
+        } catch (\SoapFault $exception) {
+            $this->handleException($exception);
+        }
+
+        return $response;
+    }
+
+    /**
      * Makes a request using Soap Client
      *
      * @param string $method The services method
@@ -147,5 +180,10 @@ class RequestHandler
         );
 
         return $response;
+    }
+
+    public function makeMockClient($client)
+    {
+        $this->client = $client;
     }
 }
