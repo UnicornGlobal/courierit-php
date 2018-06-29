@@ -94,6 +94,20 @@ class RequestHandler
     }
 
     /**
+     * Add a waybill with attached collection request
+     */
+    public function GetTrackingXML($params = [])
+    {
+        try {
+            $response = $this->client->GetTrackingXML($params);
+        } catch (\SoapFault $exception) {
+            $this->handleException($exception);
+        }
+
+        return $response;
+    }
+
+    /**
      * Makes a request using Soap Client
      *
      * @param string $method The services method
